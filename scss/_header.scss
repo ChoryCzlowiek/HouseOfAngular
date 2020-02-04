@@ -1,0 +1,50 @@
+.navbar {
+    flex-basis: 3.5rem;
+    width: 100vw;
+    display: flex;
+    position: relative;
+
+    &__name-box {
+        flex-basis: 50%;
+    }
+
+    &__icon-box {
+        flex-grow: 1;
+        height: 3.5rem;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 100%;
+        left: 100vw;
+        width: 100vw;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        transition: .5s;
+
+        &__item {
+            border-top: 1px solid rgba(128, 128, 128, 0.5);
+            text-align: center;
+            padding: .5rem 0;
+        }
+
+        &__link {
+            text-decoration: none;
+        }
+
+        &--active {
+            left: 0;
+        }
+    }
+
+    &__name {}
+
+    &__icon {
+        float: right;
+        margin-right: 1rem;
+        margin-top: 1.75rem;
+        transform: translateY(-50%);
+    }
+}

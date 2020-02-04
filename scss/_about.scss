@@ -1,0 +1,30 @@
+.about-us {
+    flex-basis: 50vh;
+    background-image: url('../images/phone_banner_photo.png');
+    background-size: cover;
+    padding: 0 1rem;
+
+    &__title {
+        margin: 7rem 0 1rem;
+        font-family: 'Patua One';
+        font-weight: 200;
+        font-size: 1.5rem;
+        color: white;
+        letter-spacing: 1px;
+    }
+
+    &__text {
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: .7rem;
+    }
+
+    &__button {
+        padding: .6rem 1.7rem;
+        margin-bottom: 1.5rem;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(255, 87, 87);
+    }
+}
