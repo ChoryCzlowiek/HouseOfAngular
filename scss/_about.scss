@@ -2,10 +2,12 @@
     flex-basis: 50vh;
     background-image: url('../images/phone_banner_photo.png');
     background-size: cover;
-    padding: 0 1rem;
+    padding: 0 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     &__title {
-        margin: 7rem 0 1rem;
         font-family: 'Patua One';
         font-weight: 200;
         font-size: 1.5rem;
@@ -14,17 +16,61 @@
     }
 
     &__text {
+        margin-top: 1rem;
         font-size: .9rem;
         color: rgba(255, 255, 255, 0.7);
-        margin-bottom: .7rem;
     }
 
     &__button {
-        padding: .6rem 1.7rem;
-        margin-bottom: 1.5rem;
+        margin-top: 1rem;
+        width: 30%;
+        height: 2rem;
         color: white;
         border-radius: 5px;
         border: none;
         background-color: rgb(255, 87, 87);
+    }
+}
+
+@media (min-width: 768px) {
+    .about-us {
+        background-image: url('../images/tablet_banner_photo.png');
+        padding: 0 1rem 2rem;
+
+        &__title {
+            font-size: 2.5rem;
+        }
+
+        &__text {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        &__button {
+            width: 15%;
+            height: 2.5rem;
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .about-us {
+        flex-basis: 60vh;
+        background-image: url('../images/desktop_banner_photo.png');
+        padding: 0 15rem 2rem;
+
+        &__title {
+            font-size: 2.5rem;
+        }
+
+        &__text {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        &__button {
+            width: 15%;
+            height: 2.5rem;
+        }
     }
 }

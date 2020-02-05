@@ -1,11 +1,12 @@
 .navbar {
     flex-basis: 3.5rem;
-    width: 100vw;
+    width: 100%;
     display: flex;
     position: relative;
 
     &__name-box {
         flex-basis: 50%;
+        position: relative;
     }
 
     &__icon-box {
@@ -16,8 +17,8 @@
     .navigation {
         position: absolute;
         top: 100%;
-        left: 100vw;
-        width: 100vw;
+        left: 100%;
+        width: 100%;
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -32,6 +33,7 @@
 
         &__link {
             text-decoration: none;
+            cursor: pointer;
         }
 
         &--active {
@@ -39,12 +41,115 @@
         }
     }
 
-    &__name {}
+    &__name {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        filter: invert(100%);
+        transform: translateY(-50%) scale(.8);
+
+    }
 
     &__icon {
         float: right;
         margin-right: 1rem;
         margin-top: 1.75rem;
         transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    &__button-box {
+        display: none;
+    }
+}
+
+@media(min-width:768px) {
+    .navbar {
+        flex-basis: 4.5rem;
+
+        &__icon-box {
+            height: 4.5rem;
+        }
+
+        .navigation {
+
+            &__item {
+                padding: 1rem 0;
+            }
+        }
+
+        &__name {
+            left: 2rem;
+            transform: translateY(-50%) scale(1);
+        }
+
+        &__icon {
+            margin-right: 2rem;
+            margin-top: 2.25rem;
+        }
+    }
+}
+
+@media(min-width:1200px) {
+    .navbar {
+        margin: 0 15%;
+        width: 70%;
+        flex-basis: 5rem;
+        justify-content: space-between;
+
+        &__name-box {
+            flex-basis: 25%;
+        }
+
+        &__icon-box {
+            display: none;
+        }
+
+        .navigation {
+            position: relative;
+            top: 0;
+            left: 0;
+            flex-basis: 55%;
+            display: block;
+            background-color: none;
+
+            &__item {
+                display: inline;
+                border-top: none;
+                text-align: none;
+                padding: 0;
+            }
+
+            &__link {
+                margin: 0 .5rem;
+                line-height: 5rem;
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
+
+            &--active {
+                left: 0;
+            }
+        }
+
+        &__button-box {
+            display: block;
+            flex-basis: 15%;
+            position: relative;
+        }
+
+        &__button {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            padding: .5rem 2rem;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(255, 87, 87);
+            color: white;
+            cursor: pointer;
+        }
     }
 }

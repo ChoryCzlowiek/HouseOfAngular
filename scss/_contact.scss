@@ -1,6 +1,6 @@
 .contact {
     flex-basis: 100%;
-    width: 100vw;
+    width: 100%;
 
     &__title {
         margin-bottom: 5rem;
@@ -23,9 +23,9 @@
     }
 
     .write-container {
-        width: 90vw;
+        width: 90%;
         height: 100%;
-        margin: 0 5vw 5rem;
+        margin: 0 5% 5rem;
         padding: 1rem;
         border: 1px solid rgba(128, 128, 128, 0.5);
 
@@ -62,19 +62,98 @@
 
                 &:focus {
                     outline: none;
-                    border: 2px solid rgba(128, 128, 128, 0.5);
+                    border: 1px solid rgba(128, 128, 128, 1);
                 }
+            }
+
+            &__checkbox {
+                display: none;
             }
 
             &__button {
                 display: block;
-                width: 30vw;
+                width: 30%;
                 height: 2rem;
                 margin: 1.5rem auto 0;
                 color: white;
                 border-radius: 5px;
                 border: none;
                 background-color: rgb(255, 87, 87);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .contact {
+
+        &__title {
+            font-size: 2.5rem;
+
+            &::before {
+                left: 45%;
+                width: 10%;
+            }
+        }
+
+        .write-container {
+            padding: 2rem;
+
+            &__heading {
+                font-size: 1.5rem;
+            }
+
+            .form {
+
+                &__label {
+                    font-size: 1.1rem;
+                }
+
+                &__button {
+                    align-self: flex-end;
+                    width: 15%;
+                    height: 2.5rem;
+                    margin: 1.5rem 0 0;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1200px) {
+    .contact {
+        &__title {
+
+            &::before {
+                left: 47.5%;
+                width: 5%;
+            }
+        }
+
+        .write-container {
+            width: 40%;
+            margin: 0 30% 5rem;
+
+            .form {
+
+                &__label {
+                    margin: 2rem 0 1rem;
+                }
+
+                .checkbox {
+                    display: inline;
+                    margin-top: 1rem;
+                    font-size: .8rem;
+
+                    &-input:checked {
+                        background-color: blue;
+                    }
+                }
+
+                &__button {
+                    width: 10%;
+                }
             }
         }
     }
