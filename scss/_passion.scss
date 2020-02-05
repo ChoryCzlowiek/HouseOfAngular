@@ -105,6 +105,14 @@
 
 @media (min-width: 1200px) {
     .passions {
+
+        &__title {
+            &::before {
+                left: 47.5%;
+                width: 5%;
+            }
+        }
+
         .items-container {
             width: 60%;
             margin: 0 20% 5rem;

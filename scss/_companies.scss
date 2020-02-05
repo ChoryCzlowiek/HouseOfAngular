@@ -1,0 +1,50 @@
+.companies {
+    display: none;
+}
+
+@media (min-width:1200px) {
+    .companies {
+        display: block;
+        flex-basis: 100%;
+        text-align: center;
+
+        &__title {
+            font-size: 2.5rem;
+            font-family: 'Patua One';
+            font-weight: 200;
+            letter-spacing: 1px;
+            position: relative;
+
+            &::before {
+                content: '';
+                margin-top: 1rem;
+                position: absolute;
+                top: 100%;
+                left: 47.5%;
+                height: 3px;
+                width: 5%;
+                background-color: red;
+            }
+        }
+
+        &__container {
+            margin: 5rem 20%;
+            width: 60%;
+            height: 60vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &__box {
+            flex-basis: 25%;
+            border: .5px solid rgba(128, 128, 128, 0.5);
+        }
+
+        &__company-name {
+            line-height: 15vh;
+            font-size: 1.8rem;
+            color: rgba(128, 128, 128, 0.7);
+        }
+    }
+}

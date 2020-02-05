@@ -82,6 +82,18 @@
 .navbar .navigation__link {
   text-decoration: none;
   cursor: pointer;
+  position: relative;
+}
+
+.navbar .navigation__link--active::before {
+  content: '';
+  margin-top: .5rem;
+  position: absolute;
+  top: 100%;
+  left: 25%;
+  height: 3px;
+  width: 50%;
+  background-color: blue;
 }
 
 .navbar .navigation--active {
@@ -236,6 +248,7 @@
   border-radius: 5px;
   border: none;
   background-color: #ff5757;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -387,6 +400,10 @@
 }
 
 @media (min-width: 1200px) {
+  .passions__title::before {
+    left: 47.5%;
+    width: 5%;
+  }
   .passions .items-container {
     width: 60%;
     margin: 0 20% 5rem;
@@ -534,6 +551,60 @@
   }
   .contact .write-container .form__button {
     width: 10%;
+  }
+}
+
+.companies {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .companies {
+    display: block;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
+  .companies__title {
+    font-size: 2.5rem;
+    font-family: 'Patua One';
+    font-weight: 200;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  .companies__title::before {
+    content: '';
+    margin-top: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 47.5%;
+    height: 3px;
+    width: 5%;
+    background-color: red;
+  }
+  .companies__container {
+    margin: 5rem 20%;
+    width: 60%;
+    height: 60vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .companies__box {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    border: 0.5px solid rgba(128, 128, 128, 0.5);
+  }
+  .companies__company-name {
+    line-height: 15vh;
+    font-size: 1.8rem;
+    color: rgba(128, 128, 128, 0.7);
   }
 }
 

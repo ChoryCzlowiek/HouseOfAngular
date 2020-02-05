@@ -34,6 +34,21 @@
         &__link {
             text-decoration: none;
             cursor: pointer;
+            position: relative;
+
+            &--active {
+
+                &::before {
+                    content: '';
+                    margin-top: .5rem;
+                    position: absolute;
+                    top: 100%;
+                    left: 25%;
+                    height: 3px;
+                    width: 50%;
+                    background-color: blue;
+                }
+            }
         }
 
         &--active {
