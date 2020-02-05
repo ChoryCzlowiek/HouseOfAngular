@@ -4,21 +4,12 @@
     text-align: center;
 
     &__title {
+        @include title;
         margin: 3rem 0;
-        font-family: 'Patua One';
-        font-weight: 200;
-        letter-spacing: 1px;
         position: relative;
 
         &::before {
-            content: '';
-            margin-top: 1rem;
-            position: absolute;
-            top: 100%;
-            left: 40%;
-            height: 3px;
-            width: 20%;
-            background-color: red;
+            @include beforeTitle;
         }
     }
 
@@ -50,9 +41,7 @@
             }
 
             &__name {
-                font-family: 'Patua One';
-                font-weight: 200;
-                letter-spacing: 1px;
+                @include title;
                 color: rgba(0, 0, 0, 0.8);
                 margin-bottom: .5rem;
             }

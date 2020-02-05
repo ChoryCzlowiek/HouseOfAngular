@@ -9,21 +9,14 @@
         text-align: center;
 
         &__title {
+            @include title;
             font-size: 2.5rem;
-            font-family: 'Patua One';
-            font-weight: 200;
-            letter-spacing: 1px;
             position: relative;
 
             &::before {
-                content: '';
-                margin-top: 1rem;
-                position: absolute;
-                top: 100%;
+                @include beforeTitle;
                 left: 47.5%;
-                height: 3px;
                 width: 5%;
-                background-color: red;
             }
         }
 

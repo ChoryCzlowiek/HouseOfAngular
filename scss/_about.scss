@@ -8,11 +8,9 @@
     justify-content: flex-end;
 
     &__title {
-        font-family: 'Patua One';
-        font-weight: 200;
+        @include title;
         font-size: 1.5rem;
         color: white;
-        letter-spacing: 1px;
     }
 
     &__text {
@@ -28,7 +26,7 @@
         color: white;
         border-radius: 5px;
         border: none;
-        background-color: rgb(255, 87, 87);
+        background-color: $btnBgcColor;
         cursor: pointer;
     }
 }

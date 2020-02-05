@@ -229,9 +229,9 @@
 .about-us__title {
   font-family: 'Patua One';
   font-weight: 200;
+  letter-spacing: 1px;
   font-size: 1.5rem;
   color: white;
-  letter-spacing: 1px;
 }
 
 .about-us__text {
@@ -297,10 +297,10 @@
 }
 
 .passions__title {
-  margin: 3rem 0;
   font-family: 'Patua One';
   font-weight: 200;
   letter-spacing: 1px;
+  margin: 3rem 0;
   position: relative;
 }
 
@@ -566,10 +566,10 @@
     text-align: center;
   }
   .companies__title {
-    font-size: 2.5rem;
     font-family: 'Patua One';
     font-weight: 200;
     letter-spacing: 1px;
+    font-size: 2.5rem;
     position: relative;
   }
   .companies__title::before {
@@ -577,10 +577,12 @@
     margin-top: 1rem;
     position: absolute;
     top: 100%;
-    left: 47.5%;
+    left: 40%;
     height: 3px;
-    width: 5%;
+    width: 20%;
     background-color: red;
+    left: 47.5%;
+    width: 5%;
   }
   .companies__container {
     margin: 5rem 20%;
