@@ -21,7 +21,7 @@ Project is created with:
 
 ## Installation
 
-* CLone or download repository from [repo](https://github.com/ChoryCzlowiek/Companies-table.git)
+* CLone or download repository from [repo](https://github.com/ChoryCzlowiek/House-of-Angular.git)
 * Make sure ```index.html``` exist
 * Open ```index.html``` in your browser
 
